@@ -1,0 +1,53 @@
+<nz-layout>
+  <nz-sider
+    (nzCollapsedChange)="collapsed()"
+    nzCollapsible
+    [(nzCollapsed)]="isCollapsed"
+    [nzWidth]="width"
+    [nzReverseArrow]="isReverseArrow"
+  >
+    <ul
+      nz-menu
+      [nzTheme]="'dark'"
+      [nzMode]="'inline'"
+      [nzInlineCollapsed]="isCollapsed"
+    >
+      <li nz-submenu>
+        <span title
+          ><i nz-icon type="message"></i
+          ><span class="nav-text">Chats</span></span
+        >
+        <ul>
+          <li nz-menu-item>All Chats</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout class="layout">
+    <nz-header class="main-header">
+      <div nz-col [nzSpan]="6" [nzPush]="18">
+        <div nz-row>
+          <ul
+            nz-menu
+            [nzMode]="'inline'"
+            style="padding-top: 8px; width: 20-0px; float: right;"
+          >
+            <li nz-submenu>
+              <span title>Hello Admin!</span>
+              <ul>
+                <li nz-menu-item>Settings</li>
+                <li nz-menu-item>Logout</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div nz-col [nzSpan]="18" [nzPull]="6"><h2>Conversation</h2></div>
+    </nz-header>
+    <nz-content class="main-content">
+      <div class="content-holder">
+        <app-chat></app-chat>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
