@@ -1,4 +1,4 @@
-<div nz-row  class="chat-component">
+<div nz-row class="chat-component">
   <div nz-col [nzSpan]="8" class="message-list-container gutter-row">
     <nz-list
       [nzDataSource]="data"
@@ -23,29 +23,25 @@
   </div>
 
   <div nz-col [nzSpan]="16" class="chat-window gutter-row">
-    <!-- spinner while loading -->
-    <nz-spin class="spinner" [nzSpinning]="isSpinning"></nz-spin>
+    <div class="message-view-area">
+      <!-- spinner while loading -->
+      <nz-spin class="spinner" [nzSpinning]="isSpinning"></nz-spin>
+    </div>
 
-    
-      <!-- <nz-input-group nzSearch nzSize="large" [nzSuffix]="suffixButton">
-        <input
+    <div class="message-type-area">
+      <ng-template #suffixIconSearch>
+        <i class="info-icon" nz-icon type="info-circle"></i>
+      </ng-template>
+      <nz-input-group nzSearch nzSize="large">
+        <textarea
           type="text"
           nz-input
-          placeholder="Type your message and press send"
+          nzAutosize
+          placeholder="Type your message and press enter"
           [(ngModel)]="message"
-        />
+          (keyup.enter)="clicked()"
+        ></textarea>
       </nz-input-group>
-      <ng-template #suffixButton>
-        <button
-          nz-button
-          nzType="primary"
-          (click)="clicked()"
-          nzSize="large"
-          nzSearch
-        >
-          Send
-        </button>
-      </ng-template> -->
-
+    </div>
   </div>
 </div>

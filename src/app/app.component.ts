@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "angular-chat";
-  isCollapsed = false;
+  isCollapsed = true;
   isReverseArrow = false;
   width = 200;
 

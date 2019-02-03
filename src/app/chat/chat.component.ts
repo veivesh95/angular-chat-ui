@@ -29,6 +29,7 @@ export class ChatComponent implements OnInit {
 
   clicked(): void {
     console.log(this.message);
+    this.message = '';
   }
 
   getId(title) {

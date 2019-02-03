@@ -36,23 +36,28 @@
     border: 0.45px solid lightgrey;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     .spinner {
       max-width: 50%;
-      align-self: center;
+      // align-self: center;
+      // justify-content: center;
     }
 
-    // .message-view-area {
-    //   height: calc(100% - 40px);
-    //   // width: 100%;
-    // }
+    .message-view-area {
+      width: 100%;
+      height: calc(100% - 40px);
+      // width: 100%;
+      // background-color: black;
+    }
 
-    // .message-type-area {
-    //   height: 40px;
-    //   // width: 100%;
-    //   background-color: black;
-    // }
+    .message-type-area {
+      height: 40px;
+      width: 100%;
+      // width: 100%;
+      // background-color: black;
+    }
   }
 }
